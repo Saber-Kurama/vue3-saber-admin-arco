@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="//unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<title>Arco Design Themes Demos</title><link rel="stylesheet" href="//lf-cdn-tos.bytescm.com/obj/static/arco-themes-vue/style-1648452257596.css"/>
+<style>body {
+  font-family: PingFang SC, Microsoft YaHei, Hiragino Sans GB, noto sans, BlinkMacSystemFont, -apple-system, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+body {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-border: rgb(var(--gray-3));
+  --color-bg-popup: var(--color-bg-5);
+  --color-bg-1: #fff;
+  --color-bg-2: #ffffff;
+  --color-bg-3: #ffffff;
+  --color-bg-4: #fff;
+  --color-bg-5: #fff;
+  --color-bg-white: #fff;
+  --color-neutral-1: rgb(var(--gray-1));
+  --color-neutral-2: rgb(var(--gray-2));
+  --color-neutral-3: rgb(var(--gray-3));
+  --color-neutral-4: rgb(var(--gray-4));
+  --color-neutral-5: rgb(var(--gray-5));
+  --color-neutral-6: rgb(var(--gray-6));
+  --color-neutral-7: rgb(var(--gray-7));
+  --color-neutral-8: rgb(var(--gray-8));
+  --color-neutral-9: rgb(var(--gray-9));
+  --color-neutral-10: rgb(var(--gray-10));
+  --color-text-1: #33353b;
+  --color-text-2: #60646f;
+  --color-text-3: var(--color-neutral-6);
+  --color-text-4: var(--color-neutral-4);
+  --color-fill-1: var(--color-neutral-1);
+  --color-fill-2: var(--color-neutral-2);
+  --color-fill-3: var(--color-neutral-3);
+  --color-fill-4: var(--color-neutral-4);
+  --color-border-1: var(--color-neutral-2);
+  --color-border-2: #d4d7e1;
+  --color-border-3: var(--color-neutral-4);
+  --color-border-4: var(--color-neutral-6);
+  --color-primary-light-1: rgb(var(--primary-1));
+  --color-primary-light-2: rgb(var(--primary-2));
+  --color-primary-light-3: rgb(var(--primary-3));
+  --color-primary-light-4: rgb(var(--primary-4));
+  --color-secondary: var(--color-neutral-2);
+  --color-secondary-hover: var(--color-neutral-3);
+  --color-secondary-active: var(--color-neutral-4);
+  --color-secondary-disabled: var(--color-neutral-1);
+  --color-danger-light-1: rgb(var(--danger-1));
+  --color-danger-light-2: rgb(var(--danger-2));
+  --color-danger-light-3: rgb(var(--danger-3));
+  --color-danger-light-4: rgb(var(--danger-4));
+  --color-success-light-1: rgb(var(--success-1));
+  --color-success-light-2: rgb(var(--success-2));
+  --color-success-light-3: rgb(var(--success-3));
+  --color-success-light-4: rgb(var(--success-4));
+  --color-warning-light-1: rgb(var(--warning-1));
+  --color-warning-light-2: rgb(var(--warning-2));
+  --color-warning-light-3: rgb(var(--warning-3));
+  --color-warning-light-4: rgb(var(--warning-4));
+  --color-link-light-1: rgb(var(--link-1));
+  --color-link-light-2: rgb(var(--link-2));
+  --color-link-light-3: rgb(var(--link-3));
+  --color-link-light-4: rgb(var(--link-4));
+  --border-radius-none: 0;
+  --border-radius-small: 2px;
+  --border-radius-medium: 3px;
+  --border-radius-large: 8px;
+  --border-radius-circle: 50%;
+  --color-tooltip-bg: rgb(var(--gray-10));
+  --color-spin-layer-bg: rgba(255, 255, 255, 0.6);
+  --color-menu-dark-bg: #232324;
+  --color-menu-light-bg: #ffffff;
+  --color-menu-dark-hover: rgba(255, 255, 255, 0.04);
+  --color-mask-bg: rgba(29, 33, 41, 0.6);
+}
+body[arco-theme='dark'] {
+  --color-black: #000000;
+  --color-border: #333335;
+  --color-bg-1: #17171a;
+  --color-bg-2: #232324;
+  --color-bg-3: #2a2a2b;
+  --color-bg-4: #313132;
+  --color-bg-5: #373739;
+  --color-bg-white: #f6f6f6;
+  --color-text-1: rgba(255, 255, 255, 0.9);
+  --color-text-2: rgba(255, 255, 255, 0.7);
+  --color-text-3: rgba(255, 255, 255, 0.5);
+  --color-text-4: rgba(255, 255, 255, 0.3);
+  --color-fill-1: rgba(255, 255, 255, 0.04);
+  --color-fill-2: rgba(255, 255, 255, 0.08);
+  --color-fill-3: rgba(255, 255, 255, 0.12);
+  --color-fill-4: rgba(255, 255, 255, 0.16);
+  --color-border-1: var(--color-neutral-2);
+  --color-border-2: var(--color-neutral-3);
+  --color-border-3: var(--color-neutral-4);
+  --color-border-4: var(--color-neutral-6);
+  --color-primary-light-1: rgba(var(--primary-6), 0.2);
+  --color-primary-light-2: rgba(var(--primary-6), 0.35);
+  --color-primary-light-3: rgba(var(--primary-6), 0.5);
+  --color-primary-light-4: rgba(var(--primary-6), 0.65);
+  --color-secondary: rgba(var(--gray-9), 0.08);
+  --color-secondary-hover: rgba(var(--gray-8), 0.16);
+  --color-secondary-active: rgba(var(--gray-7), 0.24);
+  --color-secondary-disabled: rgba(var(--gray-9), 0.08);
+  --color-danger-light-1: rgba(var(--danger-6), 0.2);
+  --color-danger-light-2: rgba(var(--danger-6), 0.35);
+  --color-danger-light-3: rgba(var(--danger-6), 0.5);
+  --color-danger-light-4: rgba(var(--danger-6), 0.65);
+  --color-success-light-1: rgba(var(--success-6), 0.2);
+  --color-success-light-2: rgba(var(--success-6), 0.35);
+  --color-success-light-3: rgba(var(--success-6), 0.5);
+  --color-success-light-4: rgba(var(--success-6), 0.65);
+  --color-warning-light-1: rgba(var(--warning-6), 0.2);
+  --color-warning-light-2: rgba(var(--warning-6), 0.35);
+  --color-warning-light-3: rgba(var(--warning-6), 0.5);
+  --color-warning-light-4: rgba(var(--warning-6), 0.65);
+  --color-link-light-1: rgba(var(--link-6), 0.2);
+  --color-link-light-2: rgba(var(--link-6), 0.35);
+  --color-link-light-3: rgba(var(--link-6), 0.5);
+  --color-link-light-4: rgba(var(--link-6), 0.65);
+  --color-tooltip-bg: #373739;
+  --color-spin-layer-bg: rgba(51, 51, 51, 0.6);
+  --color-menu-dark-bg: #232324;
+  --color-menu-light-bg: #232324;
+  --color-menu-dark-hover: var(--color-fill-2);
+  --color-mask-bg: rgba(23, 23, 26, 0.6);
+}
+body {
+  --red-1: 255, 236, 232;
+  --red-2: 253, 205, 197;
+  --red-3: 251, 172, 163;
+  --red-4: 249, 137, 129;
+  --red-5: 247, 101, 96;
+  --red-6: 245, 63, 63;
+  --red-7: 203, 39, 45;
+  --red-8: 161, 21, 30;
+  --red-9: 119, 8, 19;
+  --red-10: 77, 0, 10;
+  --orangered-1: 255, 243, 232;
+  --orangered-2: 253, 221, 195;
+  --orangered-3: 252, 197, 159;
+  --orangered-4: 250, 172, 123;
+  --orangered-5: 249, 144, 87;
+  --orangered-6: 247, 114, 52;
+  --orangered-7: 204, 81, 32;
+  --orangered-8: 162, 53, 17;
+  --orangered-9: 119, 31, 6;
+  --orangered-10: 77, 14, 0;
+  --orange-1: 255, 247, 232;
+  --orange-2: 255, 228, 186;
+  --orange-3: 255, 207, 139;
+  --orange-4: 255, 182, 93;
+  --orange-5: 255, 154, 46;
+  --orange-6: 255, 125, 0;
+  --orange-7: 210, 95, 0;
+  --orange-8: 166, 69, 0;
+  --orange-9: 121, 46, 0;
+  --orange-10: 77, 27, 0;
+  --gold-1: 255, 252, 232;
+  --gold-2: 253, 244, 191;
+  --gold-3: 252, 233, 150;
+  --gold-4: 250, 220, 109;
+  --gold-5: 249, 204, 69;
+  --gold-6: 247, 186, 30;
+  --gold-7: 204, 146, 19;
+  --gold-8: 162, 109, 10;
+  --gold-9: 119, 75, 4;
+  --gold-10: 77, 45, 0;
+  --yellow-1: 254, 255, 232;
+  --yellow-2: 254, 254, 190;
+  --yellow-3: 253, 250, 148;
+  --yellow-4: 252, 242, 107;
+  --yellow-5: 251, 232, 66;
+  --yellow-6: 250, 220, 25;
+  --yellow-7: 207, 175, 15;
+  --yellow-8: 163, 132, 8;
+  --yellow-9: 120, 93, 3;
+  --yellow-10: 77, 56, 0;
+  --lime-1: 252, 255, 232;
+  --lime-2: 237, 248, 187;
+  --lime-3: 220, 241, 144;
+  --lime-4: 201, 233, 104;
+  --lime-5: 181, 226, 65;
+  --lime-6: 159, 219, 29;
+  --lime-7: 126, 183, 18;
+  --lime-8: 95, 148, 10;
+  --lime-9: 67, 112, 4;
+  --lime-10: 42, 77, 0;
+  --green-1: 232, 255, 234;
+  --green-2: 175, 240, 181;
+  --green-3: 123, 225, 136;
+  --green-4: 76, 210, 99;
+  --green-5: 35, 195, 67;
+  --green-6: 0, 180, 42;
+  --green-7: 0, 154, 41;
+  --green-8: 0, 128, 38;
+  --green-9: 0, 102, 34;
+  --green-10: 0, 77, 28;
+  --cyan-1: 232, 255, 251;
+  --cyan-2: 183, 244, 236;
+  --cyan-3: 137, 233, 224;
+  --cyan-4: 94, 223, 214;
+  --cyan-5: 55, 212, 207;
+  --cyan-6: 20, 201, 201;
+  --cyan-7: 13, 165, 170;
+  --cyan-8: 7, 130, 139;
+  --cyan-9: 3, 97, 108;
+  --cyan-10: 0, 66, 77;
+  --blue-1: 232, 247, 255;
+  --blue-2: 195, 231, 254;
+  --blue-3: 159, 212, 253;
+  --blue-4: 123, 192, 252;
+  --blue-5: 87, 169, 251;
+  --blue-6: 52, 145, 250;
+  --blue-7: 32, 108, 207;
+  --blue-8: 17, 75, 163;
+  --blue-9: 6, 48, 120;
+  --blue-10: 0, 26, 77;
+  --arcoblue-1: 232, 243, 255;
+  --arcoblue-2: 190, 218, 255;
+  --arcoblue-3: 148, 191, 255;
+  --arcoblue-4: 106, 161, 255;
+  --arcoblue-5: 64, 128, 255;
+  --arcoblue-6: 22, 93, 255;
+  --arcoblue-7: 14, 66, 210;
+  --arcoblue-8: 7, 44, 166;
+  --arcoblue-9: 3, 26, 121;
+  --arcoblue-10: 0, 13, 77;
+  --purple-1: 245, 232, 255;
+  --purple-2: 221, 190, 246;
+  --purple-3: 195, 150, 237;
+  --purple-4: 168, 113, 227;
+  --purple-5: 141, 78, 218;
+  --purple-6: 114, 46, 209;
+  --purple-7: 85, 29, 176;
+  --purple-8: 60, 16, 143;
+  --purple-9: 39, 6, 110;
+  --purple-10: 22, 0, 77;
+  --pinkpurple-1: 255, 232, 251;
+  --pinkpurple-2: 247, 186, 239;
+  --pinkpurple-3: 240, 142, 230;
+  --pinkpurple-4: 232, 101, 223;
+  --pinkpurple-5: 225, 62, 219;
+  --pinkpurple-6: 217, 26, 217;
+  --pinkpurple-7: 176, 16, 182;
+  --pinkpurple-8: 138, 9, 147;
+  --pinkpurple-9: 101, 3, 112;
+  --pinkpurple-10: 66, 0, 77;
+  --magenta-1: 255, 232, 241;
+  --magenta-2: 253, 194, 219;
+  --magenta-3: 251, 157, 199;
+  --magenta-4: 249, 121, 183;
+  --magenta-5: 247, 84, 168;
+  --magenta-6: 245, 49, 157;
+  --magenta-7: 203, 30, 131;
+  --magenta-8: 161, 16, 105;
+  --magenta-9: 119, 6, 79;
+  --magenta-10: 77, 0, 52;
+  --gray-1: 247, 248, 250;
+  --gray-2: 242, 243, 245;
+  --gray-3: 229, 230, 235;
+  --gray-4: 201, 205, 212;
+  --gray-5: 169, 174, 184;
+  --gray-6: 134, 144, 156;
+  --gray-7: 107, 119, 133;
+  --gray-8: 78, 89, 105;
+  --gray-9: 39, 46, 59;
+  --gray-10: 29, 33, 41;
+  --primary-1: var(--arcoblue-1);
+  --primary-2: var(--arcoblue-2);
+  --primary-3: var(--arcoblue-3);
+  --primary-4: var(--arcoblue-4);
+  --primary-5: 57, 110, 254;
+  --primary-6: 60, 110, 255;
+  --primary-7: 16, 99, 255;
+  --primary-8: var(--arcoblue-8);
+  --primary-9: var(--arcoblue-9);
+  --primary-10: var(--arcoblue-10);
+  --link-1: var(--arcoblue-1);
+  --link-2: var(--arcoblue-2);
+  --link-3: var(--arcoblue-3);
+  --link-4: var(--arcoblue-4);
+  --link-5: var(--arcoblue-5);
+  --link-6: var(--arcoblue-6);
+  --link-7: var(--arcoblue-7);
+  --link-8: var(--arcoblue-8);
+  --link-9: var(--arcoblue-9);
+  --link-10: var(--arcoblue-10);
+  --success-1: var(--green-1);
+  --success-2: var(--green-2);
+  --success-3: var(--green-3);
+  --success-4: var(--green-4);
+  --success-5: var(--green-5);
+  --success-6: 36, 209, 126;
+  --success-7: var(--green-7);
+  --success-8: var(--green-8);
+  --success-9: var(--green-9);
+  --success-10: var(--green-10);
+  --danger-1: var(--red-1);
+  --danger-2: var(--red-2);
+  --danger-3: var(--red-3);
+  --danger-4: var(--red-4);
+  --danger-5: var(--red-5);
+  --danger-6: 255, 26, 59;
+  --danger-7: var(--red-7);
+  --danger-8: var(--red-8);
+  --danger-9: var(--red-9);
+  --danger-10: var(--red-10);
+  --warning-1: var(--orange-1);
+  --warning-2: var(--orange-2);
+  --warning-3: var(--orange-3);
+  --warning-4: var(--orange-4);
+  --warning-5: var(--orange-5);
+  --warning-6: var(--orange-6);
+  --warning-7: var(--orange-7);
+  --warning-8: var(--orange-8);
+  --warning-9: var(--orange-9);
+  --warning-10: var(--orange-10);
+  --color-text-btn: #396efe;
+  --color-border-table: #e8ebf2;
+  --color-bg-th: #eff1f7;
+}
+body[arco-theme='dark'] {
+  --red-1: 77, 0, 10;
+  --red-2: 119, 6, 17;
+  --red-3: 161, 22, 31;
+  --red-4: 203, 46, 52;
+  --red-5: 245, 78, 78;
+  --red-6: 247, 105, 101;
+  --red-7: 249, 141, 134;
+  --red-8: 251, 176, 167;
+  --red-9: 253, 209, 202;
+  --red-10: 255, 240, 236;
+  --orangered-1: 77, 14, 0;
+  --orangered-2: 119, 30, 5;
+  --orangered-3: 162, 55, 20;
+  --orangered-4: 204, 87, 41;
+  --orangered-5: 247, 126, 69;
+  --orangered-6: 249, 146, 90;
+  --orangered-7: 250, 173, 125;
+  --orangered-8: 252, 198, 161;
+  --orangered-9: 253, 222, 197;
+  --orangered-10: 255, 244, 235;
+  --orange-1: 77, 27, 0;
+  --orange-2: 121, 48, 4;
+  --orange-3: 166, 75, 10;
+  --orange-4: 210, 105, 19;
+  --orange-5: 255, 141, 31;
+  --orange-6: 255, 150, 38;
+  --orange-7: 255, 179, 87;
+  --orange-8: 255, 205, 135;
+  --orange-9: 255, 227, 184;
+  --orange-10: 255, 247, 232;
+  --gold-1: 77, 45, 0;
+  --gold-2: 119, 75, 4;
+  --gold-3: 162, 111, 15;
+  --gold-4: 204, 150, 31;
+  --gold-5: 247, 192, 52;
+  --gold-6: 249, 204, 68;
+  --gold-7: 250, 220, 108;
+  --gold-8: 252, 233, 149;
+  --gold-9: 253, 244, 190;
+  --gold-10: 255, 252, 232;
+  --yellow-1: 77, 56, 0;
+  --yellow-2: 120, 94, 7;
+  --yellow-3: 163, 134, 20;
+  --yellow-4: 207, 179, 37;
+  --yellow-5: 250, 225, 60;
+  --yellow-6: 251, 233, 75;
+  --yellow-7: 252, 243, 116;
+  --yellow-8: 253, 250, 157;
+  --yellow-9: 254, 254, 198;
+  --yellow-10: 254, 255, 240;
+  --lime-1: 42, 77, 0;
+  --lime-2: 68, 112, 6;
+  --lime-3: 98, 148, 18;
+  --lime-4: 132, 183, 35;
+  --lime-5: 168, 219, 57;
+  --lime-6: 184, 226, 75;
+  --lime-7: 203, 233, 112;
+  --lime-8: 222, 241, 152;
+  --lime-9: 238, 248, 194;
+  --lime-10: 253, 255, 238;
+  --green-1: 0, 77, 28;
+  --green-2: 4, 102, 37;
+  --green-3: 10, 128, 45;
+  --green-4: 18, 154, 55;
+  --green-5: 29, 180, 64;
+  --green-6: 39, 195, 70;
+  --green-7: 80, 210, 102;
+  --green-8: 126, 225, 139;
+  --green-9: 178, 240, 183;
+  --green-10: 235, 255, 236;
+  --cyan-1: 0, 66, 77;
+  --cyan-2: 6, 97, 108;
+  --cyan-3: 17, 131, 139;
+  --cyan-4: 31, 166, 170;
+  --cyan-5: 48, 201, 201;
+  --cyan-6: 63, 212, 207;
+  --cyan-7: 102, 223, 215;
+  --cyan-8: 144, 233, 225;
+  --cyan-9: 190, 244, 237;
+  --cyan-10: 240, 255, 252;
+  --blue-1: 0, 26, 77;
+  --blue-2: 5, 47, 120;
+  --blue-3: 19, 76, 163;
+  --blue-4: 41, 113, 207;
+  --blue-5: 70, 154, 250;
+  --blue-6: 90, 170, 251;
+  --blue-7: 125, 193, 252;
+  --blue-8: 161, 213, 253;
+  --blue-9: 198, 232, 254;
+  --blue-10: 234, 248, 255;
+  --arcoblue-1: 0, 13, 77;
+  --arcoblue-2: 4, 27, 121;
+  --arcoblue-3: 14, 50, 166;
+  --arcoblue-4: 29, 77, 210;
+  --arcoblue-5: 48, 111, 255;
+  --arcoblue-6: 60, 126, 255;
+  --arcoblue-7: 104, 159, 255;
+  --arcoblue-8: 147, 190, 255;
+  --arcoblue-9: 190, 218, 255;
+  --arcoblue-10: 234, 244, 255;
+  --purple-1: 22, 0, 77;
+  --purple-2: 39, 6, 110;
+  --purple-3: 62, 19, 143;
+  --purple-4: 90, 37, 176;
+  --purple-5: 123, 61, 209;
+  --purple-6: 142, 81, 218;
+  --purple-7: 169, 116, 227;
+  --purple-8: 197, 154, 237;
+  --purple-9: 223, 194, 246;
+  --purple-10: 247, 237, 255;
+  --pinkpurple-1: 66, 0, 77;
+  --pinkpurple-2: 101, 3, 112;
+  --pinkpurple-3: 138, 13, 147;
+  --pinkpurple-4: 176, 27, 182;
+  --pinkpurple-5: 217, 46, 217;
+  --pinkpurple-6: 225, 61, 219;
+  --pinkpurple-7: 232, 102, 223;
+  --pinkpurple-8: 240, 146, 230;
+  --pinkpurple-9: 247, 193, 240;
+  --pinkpurple-10: 255, 242, 253;
+  --magenta-1: 77, 0, 52;
+  --magenta-2: 119, 8, 80;
+  --magenta-3: 161, 23, 108;
+  --magenta-4: 203, 43, 136;
+  --magenta-5: 245, 69, 166;
+  --magenta-6: 247, 86, 169;
+  --magenta-7: 249, 122, 184;
+  --magenta-8: 251, 158, 200;
+  --magenta-9: 253, 195, 219;
+  --magenta-10: 255, 232, 241;
+  --gray-1: 23, 23, 26;
+  --gray-2: 46, 46, 48;
+  --gray-3: 72, 72, 73;
+  --gray-4: 95, 95, 96;
+  --gray-5: 120, 120, 122;
+  --gray-6: 146, 146, 147;
+  --gray-7: 171, 171, 172;
+  --gray-8: 197, 197, 197;
+  --gray-9: 223, 223, 223;
+  --gray-10: 246, 246, 246;
+  --primary-1: var(--arcoblue-1);
+  --primary-2: var(--arcoblue-2);
+  --primary-3: var(--arcoblue-3);
+  --primary-4: var(--arcoblue-4);
+  --primary-5: var(--arcoblue-5);
+  --primary-6: var(--arcoblue-6);
+  --primary-7: var(--arcoblue-7);
+  --primary-8: var(--arcoblue-8);
+  --primary-9: var(--arcoblue-9);
+  --primary-10: var(--arcoblue-10);
+  --link-1: var(--arcoblue-1);
+  --link-2: var(--arcoblue-2);
+  --link-3: var(--arcoblue-3);
+  --link-4: var(--arcoblue-4);
+  --link-5: var(--arcoblue-5);
+  --link-6: var(--arcoblue-6);
+  --link-7: var(--arcoblue-7);
+  --link-8: var(--arcoblue-8);
+  --link-9: var(--arcoblue-9);
+  --link-10: var(--arcoblue-10);
+  --success-1: var(--green-1);
+  --success-2: var(--green-2);
+  --success-3: var(--green-3);
+  --success-4: var(--green-4);
+  --success-5: var(--green-5);
+  --success-6: var(--green-6);
+  --success-7: var(--green-7);
+  --success-8: var(--green-8);
+  --success-9: var(--green-9);
+  --success-10: var(--green-10);
+  --danger-1: var(--red-1);
+  --danger-2: var(--red-2);
+  --danger-3: var(--red-3);
+  --danger-4: var(--red-4);
+  --danger-5: var(--red-5);
+  --danger-6: var(--red-6);
+  --danger-7: var(--red-7);
+  --danger-8: var(--red-8);
+  --danger-9: var(--red-9);
+  --danger-10: var(--red-10);
+  --warning-1: var(--orange-1);
+  --warning-2: var(--orange-2);
+  --warning-3: var(--orange-3);
+  --warning-4: var(--orange-4);
+  --warning-5: var(--orange-5);
+  --warning-6: var(--orange-6);
+  --warning-7: var(--orange-7);
+  --warning-8: var(--orange-8);
+  --warning-9: var(--orange-9);
+  --warning-10: var(--orange-10);
+  --color-text-btn: #396efe;
+  --color-border-table: #ffffff;
+  --color-bg-th: #eff1f7;
+}
+
+</style>
+<link rel="stylesheet/less" href="https://unpkg.com/@arco-design/arco-vue-ui-dist@latest/less/web-vue/arco.less"/>
+<style id="Button_customize_style">.arco-btn {
+  padding: 0 18px;
+}
+.arco-btn.arco-btn-text {
+  padding: 0;
+  height: auto;
+}
+</style>
+<style id="Tooltip_customize_style"></style><style id="Drawer_customize_style"></style>
+<style id="Font_customize_style"></style><style id="Card_customize_style">.arco-card .arco-card-header {
+  padding: 18px;
+  height: auto;
+}
+.arco-card .arco-card-body {
+  padding: 18px;
+}
+.arco-card.arco-card-size-small .arco-card-header {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+}
+.arco-card.arco-card-size-small .arco-card-body {
+  padding: 18px;
+}
+</style>
+<style id="Modal_customize_style"></style><style id="Table_customize_style">.arco-table .arco-table-cell {
+  padding: 19px 18px;
+}
+</style>
+<style id="Input_customize_style"></style>
+<style id="Select_customize_style"></style>
+<style id="Dropdown_customize_style"></style><style id="Radio_customize_style"></style>
+<script>less = {"globalVars":{"@red-1":"#FFECE8","@red-2":"#FDCDC5","@red-3":"#FBACA3","@red-4":"#F98981","@red-5":"#F76560","@red-6":"#f53f3f","@red-7":"#CB272D","@red-8":"#A1151E","@red-9":"#770813","@red-10":"#4D000A","@orangered-1":"#FFF3E8","@orangered-2":"#FDDDC3","@orangered-3":"#FCC59F","@orangered-4":"#FAAC7B","@orangered-5":"#F99057","@orangered-6":"#f77234","@orangered-7":"#CC5120","@orangered-8":"#A23511","@orangered-9":"#771F06","@orangered-10":"#4D0E00","@orange-1":"#FFF7E8","@orange-2":"#FFE4BA","@orange-3":"#FFCF8B","@orange-4":"#FFB65D","@orange-5":"#FF9A2E","@orange-6":"#ff7d00","@orange-7":"#D25F00","@orange-8":"#A64500","@orange-9":"#792E00","@orange-10":"#4D1B00","@gold-1":"#FFFCE8","@gold-2":"#FDF4BF","@gold-3":"#FCE996","@gold-4":"#FADC6D","@gold-5":"#F9CC45","@gold-6":"#f7ba1e","@gold-7":"#CC9213","@gold-8":"#A26D0A","@gold-9":"#774B04","@gold-10":"#4D2D00","@yellow-1":"#FEFFE8","@yellow-2":"#FEFEBE","@yellow-3":"#FDFA94","@yellow-4":"#FCF26B","@yellow-5":"#FBE842","@yellow-6":"#fadc19","@yellow-7":"#CFAF0F","@yellow-8":"#A38408","@yellow-9":"#785D03","@yellow-10":"#4D3800","@lime-1":"#FCFFE8","@lime-2":"#EDF8BB","@lime-3":"#DCF190","@lime-4":"#C9E968","@lime-5":"#B5E241","@lime-6":"#9fdb1d","@lime-7":"#7EB712","@lime-8":"#5F940A","@lime-9":"#437004","@lime-10":"#2A4D00","@green-1":"#E8FFEA","@green-2":"#AFF0B5","@green-3":"#7BE188","@green-4":"#4CD263","@green-5":"#23C343","@green-6":"#00b42a","@green-7":"#009A29","@green-8":"#008026","@green-9":"#006622","@green-10":"#004D1C","@cyan-1":"#E8FFFB","@cyan-2":"#B7F4EC","@cyan-3":"#89E9E0","@cyan-4":"#5EDFD6","@cyan-5":"#37D4CF","@cyan-6":"#14c9c9","@cyan-7":"#0DA5AA","@cyan-8":"#07828B","@cyan-9":"#03616C","@cyan-10":"#00424D","@blue-1":"#E8F7FF","@blue-2":"#C3E7FE","@blue-3":"#9FD4FD","@blue-4":"#7BC0FC","@blue-5":"#57A9FB","@blue-6":"#3491fa","@blue-7":"#206CCF","@blue-8":"#114BA3","@blue-9":"#063078","@blue-10":"#001A4D","@arcoblue-1":"#E8F3FF","@arcoblue-2":"#BEDAFF","@arcoblue-3":"#94BFFF","@arcoblue-4":"#6AA1FF","@arcoblue-5":"#4080FF","@arcoblue-6":"#165dff","@arcoblue-7":"#0E42D2","@arcoblue-8":"#072CA6","@arcoblue-9":"#031A79","@arcoblue-10":"#000D4D","@purple-1":"#F5E8FF","@purple-2":"#DDBEF6","@purple-3":"#C396ED","@purple-4":"#A871E3","@purple-5":"#8D4EDA","@purple-6":"#722ed1","@purple-7":"#551DB0","@purple-8":"#3C108F","@purple-9":"#27066E","@purple-10":"#16004D","@pinkpurple-1":"#FFE8FB","@pinkpurple-2":"#F7BAEF","@pinkpurple-3":"#F08EE6","@pinkpurple-4":"#E865DF","@pinkpurple-5":"#E13EDB","@pinkpurple-6":"#d91ad9","@pinkpurple-7":"#B010B6","@pinkpurple-8":"#8A0993","@pinkpurple-9":"#650370","@pinkpurple-10":"#42004D","@magenta-1":"#FFE8F1","@magenta-2":"#FDC2DB","@magenta-3":"#FB9DC7","@magenta-4":"#F979B7","@magenta-5":"#F754A8","@magenta-6":"#f5319d","@magenta-7":"#CB1E83","@magenta-8":"#A11069","@magenta-9":"#77064F","@magenta-10":"#4D0034","@gray-1":"#f7f8fa","@gray-2":"#f2f3f5","@gray-3":"#e5e6eb","@gray-4":"#c9cdd4","@gray-5":"#a9aeb8","@gray-6":"#86909c","@gray-7":"#6b7785","@gray-8":"#4e5969","@gray-9":"#272e3b","@gray-10":"#1d2129","@dark-red-1":"#4D000A","@dark-red-2":"#770611","@dark-red-3":"#A1161F","@dark-red-4":"#CB2E34","@dark-red-5":"#F54E4E","@dark-red-6":"#F76965","@dark-red-7":"#F98D86","@dark-red-8":"#FBB0A7","@dark-red-9":"#FDD1CA","@dark-red-10":"#FFF0EC","@dark-orangered-1":"#4D0E00","@dark-orangered-2":"#771E05","@dark-orangered-3":"#A23714","@dark-orangered-4":"#CC5729","@dark-orangered-5":"#F77E45","@dark-orangered-6":"#F9925A","@dark-orangered-7":"#FAAD7D","@dark-orangered-8":"#FCC6A1","@dark-orangered-9":"#FDDEC5","@dark-orangered-10":"#FFF4EB","@dark-orange-1":"#4D1B00","@dark-orange-2":"#793004","@dark-orange-3":"#A64B0A","@dark-orange-4":"#D26913","@dark-orange-5":"#FF8D1F","@dark-orange-6":"#FF9626","@dark-orange-7":"#FFB357","@dark-orange-8":"#FFCD87","@dark-orange-9":"#FFE3B8","@dark-orange-10":"#FFF7E8","@dark-gold-1":"#4D2D00","@dark-gold-2":"#774B04","@dark-gold-3":"#A26F0F","@dark-gold-4":"#CC961F","@dark-gold-5":"#F7C034","@dark-gold-6":"#F9CC44","@dark-gold-7":"#FADC6C","@dark-gold-8":"#FCE995","@dark-gold-9":"#FDF4BE","@dark-gold-10":"#FFFCE8","@dark-yellow-1":"#4D3800","@dark-yellow-2":"#785E07","@dark-yellow-3":"#A38614","@dark-yellow-4":"#CFB325","@dark-yellow-5":"#FAE13C","@dark-yellow-6":"#FBE94B","@dark-yellow-7":"#FCF374","@dark-yellow-8":"#FDFA9D","@dark-yellow-9":"#FEFEC6","@dark-yellow-10":"#FEFFF0","@dark-lime-1":"#2A4D00","@dark-lime-2":"#447006","@dark-lime-3":"#629412","@dark-lime-4":"#84B723","@dark-lime-5":"#A8DB39","@dark-lime-6":"#B8E24B","@dark-lime-7":"#CBE970","@dark-lime-8":"#DEF198","@dark-lime-9":"#EEF8C2","@dark-lime-10":"#FDFFEE","@dark-green-1":"#004D1C","@dark-green-2":"#046625","@dark-green-3":"#0A802D","@dark-green-4":"#129A37","@dark-green-5":"#1DB440","@dark-green-6":"#27C346","@dark-green-7":"#50D266","@dark-green-8":"#7EE18B","@dark-green-9":"#B2F0B7","@dark-green-10":"#EBFFEC","@dark-cyan-1":"#00424D","@dark-cyan-2":"#06616C","@dark-cyan-3":"#11838B","@dark-cyan-4":"#1FA6AA","@dark-cyan-5":"#30C9C9","@dark-cyan-6":"#3FD4CF","@dark-cyan-7":"#66DFD7","@dark-cyan-8":"#90E9E1","@dark-cyan-9":"#BEF4ED","@dark-cyan-10":"#F0FFFC","@dark-blue-1":"#001A4D","@dark-blue-2":"#052F78","@dark-blue-3":"#134CA3","@dark-blue-4":"#2971CF","@dark-blue-5":"#469AFA","@dark-blue-6":"#5AAAFB","@dark-blue-7":"#7DC1FC","@dark-blue-8":"#A1D5FD","@dark-blue-9":"#C6E8FE","@dark-blue-10":"#EAF8FF","@dark-arcoblue-1":"#000D4D","@dark-arcoblue-2":"#041B79","@dark-arcoblue-3":"#0E32A6","@dark-arcoblue-4":"#1D4DD2","@dark-arcoblue-5":"#306FFF","@dark-arcoblue-6":"#3C7EFF","@dark-arcoblue-7":"#689FFF","@dark-arcoblue-8":"#93BEFF","@dark-arcoblue-9":"#BEDAFF","@dark-arcoblue-10":"#EAF4FF","@dark-purple-1":"#16004D","@dark-purple-2":"#27066E","@dark-purple-3":"#3E138F","@dark-purple-4":"#5A25B0","@dark-purple-5":"#7B3DD1","@dark-purple-6":"#8E51DA","@dark-purple-7":"#A974E3","@dark-purple-8":"#C59AED","@dark-purple-9":"#DFC2F6","@dark-purple-10":"#F7EDFF","@dark-pinkpurple-1":"#42004D","@dark-pinkpurple-2":"#650370","@dark-pinkpurple-3":"#8A0D93","@dark-pinkpurple-4":"#B01BB6","@dark-pinkpurple-5":"#D92ED9","@dark-pinkpurple-6":"#E13DDB","@dark-pinkpurple-7":"#E866DF","@dark-pinkpurple-8":"#F092E6","@dark-pinkpurple-9":"#F7C1F0","@dark-pinkpurple-10":"#FFF2FD","@dark-magenta-1":"#4D0034","@dark-magenta-2":"#770850","@dark-magenta-3":"#A1176C","@dark-magenta-4":"#CB2B88","@dark-magenta-5":"#F545A6","@dark-magenta-6":"#F756A9","@dark-magenta-7":"#F97AB8","@dark-magenta-8":"#FB9EC8","@dark-magenta-9":"#FDC3DB","@dark-magenta-10":"#FFE8F1","@dark-gray-1":"#17171a","@dark-gray-2":"#2e2e30","@dark-gray-3":"#484849","@dark-gray-4":"#5f5f60","@dark-gray-5":"#78787a","@dark-gray-6":"#929293","@dark-gray-7":"#ababac","@dark-gray-8":"#c5c5c5","@dark-gray-9":"#dfdfdf","@dark-gray-10":"#f6f6f6","@primary-1":"rgb(var(--arcoblue-1))","@primary-2":"rgb(var(--arcoblue-2))","@primary-3":"rgb(var(--arcoblue-3))","@primary-4":"rgb(var(--arcoblue-4))","@primary-5":"rgb(57, 110, 254)","@primary-6":"rgb(60, 110, 255)","@primary-7":"rgb(16, 99, 255)","@primary-8":"rgb(var(--arcoblue-8))","@primary-9":"rgb(var(--arcoblue-9))","@primary-10":"rgb(var(--arcoblue-10))","@dark-primary-1":"rgb(var(--arcoblue-1))","@dark-primary-2":"rgb(var(--arcoblue-2))","@dark-primary-3":"rgb(var(--arcoblue-3))","@dark-primary-4":"rgb(var(--arcoblue-4))","@dark-primary-5":"rgb(var(--arcoblue-5))","@dark-primary-6":"rgb(var(--arcoblue-6))","@dark-primary-7":"rgb(var(--arcoblue-7))","@dark-primary-8":"rgb(var(--arcoblue-8))","@dark-primary-9":"rgb(var(--arcoblue-9))","@dark-primary-10":"rgb(var(--arcoblue-10))","@success-1":"rgb(var(--green-1))","@success-2":"rgb(var(--green-2))","@success-3":"rgb(var(--green-3))","@success-4":"rgb(var(--green-4))","@success-5":"rgb(var(--green-5))","@success-6":"rgb(36, 209, 126)","@success-7":"rgb(var(--green-7))","@success-8":"rgb(var(--green-8))","@success-9":"rgb(var(--green-9))","@success-10":"rgb(var(--green-10))","@dark-success-1":"rgb(var(--green-1))","@dark-success-2":"rgb(var(--green-2))","@dark-success-3":"rgb(var(--green-3))","@dark-success-4":"rgb(var(--green-4))","@dark-success-5":"rgb(var(--green-5))","@dark-success-6":"rgb(var(--green-6))","@dark-success-7":"rgb(var(--green-7))","@dark-success-8":"rgb(var(--green-8))","@dark-success-9":"rgb(var(--green-9))","@dark-success-10":"rgb(var(--green-10))","@danger-1":"rgb(var(--red-1))","@danger-2":"rgb(var(--red-2))","@danger-3":"rgb(var(--red-3))","@danger-4":"rgb(var(--red-4))","@danger-5":"rgb(var(--red-5))","@danger-6":"rgb(255, 26, 59)","@danger-7":"rgb(var(--red-7))","@danger-8":"rgb(var(--red-8))","@danger-9":"rgb(var(--red-9))","@danger-10":"rgb(var(--red-10))","@dark-danger-1":"rgb(var(--red-1))","@dark-danger-2":"rgb(var(--red-2))","@dark-danger-3":"rgb(var(--red-3))","@dark-danger-4":"rgb(var(--red-4))","@dark-danger-5":"rgb(var(--red-5))","@dark-danger-6":"rgb(var(--red-6))","@dark-danger-7":"rgb(var(--red-7))","@dark-danger-8":"rgb(var(--red-8))","@dark-danger-9":"rgb(var(--red-9))","@dark-danger-10":"rgb(var(--red-10))","@warning-1":"rgb(var(--orange-1))","@warning-2":"rgb(var(--orange-2))","@warning-3":"rgb(var(--orange-3))","@warning-4":"rgb(var(--orange-4))","@warning-5":"rgb(var(--orange-5))","@warning-6":"rgb(var(--orange-6))","@warning-7":"rgb(var(--orange-7))","@warning-8":"rgb(var(--orange-8))","@warning-9":"rgb(var(--orange-9))","@warning-10":"rgb(var(--orange-10))","@dark-warning-1":"rgb(var(--orange-1))","@dark-warning-2":"rgb(var(--orange-2))","@dark-warning-3":"rgb(var(--orange-3))","@dark-warning-4":"rgb(var(--orange-4))","@dark-warning-5":"rgb(var(--orange-5))","@dark-warning-6":"rgb(var(--orange-6))","@dark-warning-7":"rgb(var(--orange-7))","@dark-warning-8":"rgb(var(--orange-8))","@dark-warning-9":"rgb(var(--orange-9))","@dark-warning-10":"rgb(var(--orange-10))","@link-1":"rgb(var(--arcoblue-1))","@link-2":"rgb(var(--arcoblue-2))","@link-3":"rgb(var(--arcoblue-3))","@link-4":"rgb(var(--arcoblue-4))","@link-5":"rgb(var(--arcoblue-5))","@link-6":"rgb(var(--arcoblue-6))","@link-7":"rgb(var(--arcoblue-7))","@link-8":"rgb(var(--arcoblue-8))","@link-9":"rgb(var(--arcoblue-9))","@link-10":"rgb(var(--arcoblue-10))","@dark-link-1":"rgb(var(--arcoblue-1))","@dark-link-2":"rgb(var(--arcoblue-2))","@dark-link-3":"rgb(var(--arcoblue-3))","@dark-link-4":"rgb(var(--arcoblue-4))","@dark-link-5":"rgb(var(--arcoblue-5))","@dark-link-6":"rgb(var(--arcoblue-6))","@dark-link-7":"rgb(var(--arcoblue-7))","@dark-link-8":"rgb(var(--arcoblue-8))","@dark-link-9":"rgb(var(--arcoblue-9))","@dark-link-10":"rgb(var(--arcoblue-10))","@border-none":"0","@border-1":"1px","@border-2":"2px","@border-3":"3px","@border-4":"4px","@border-5":"5px","@border-solid":"solid","@border-dashed":"dashed","@border-dotted":"dotted","@border-radius-none":"0","@border-radius-small":"2px","@border-radius-medium":"3px","@border-radius-large":"8px","@border-radius-circle":"50%","@shadow-distance-none":"0","@shadow-distance-1":"1px","@shadow-distance-2":"2px","@shadow-distance-3":"3px","@shadow-distance-4":"4px","@size-none":"0","@size-1":"2px","@size-2":"4px","@size-3":"6px","@size-4":"8px","@size-5":"10px","@size-6":"12px","@size-7":"14px","@size-8":"16px","@size-9":"18px","@size-10":"20px","@size-11":"22px","@size-12":"24px","@size-13":"26px","@size-14":"28px","@size-15":"30px","@size-16":"32px","@size-17":"34px","@size-18":"36px","@size-19":"38px","@size-20":"40px","@size-21":"42px","@size-22":"44px","@size-23":"46px","@size-24":"48px","@size-25":"50px","@size-26":"52px","@size-27":"54px","@size-28":"56px","@size-29":"58px","@size-30":"60px","@size-31":"62px","@size-32":"64px","@size-33":"66px","@size-34":"68px","@size-35":"70px","@size-36":"72px","@size-37":"74px","@size-38":"76px","@size-39":"78px","@size-40":"80px","@size-41":"82px","@size-42":"84px","@size-43":"86px","@size-44":"88px","@size-45":"90px","@size-46":"92px","@size-47":"94px","@size-48":"96px","@size-49":"98px","@size-50":"100px","@size-mini":"@size-12","@size-small":"@size-15","@size-default":"@size-18","@size-large":"@size-20","@spacing-none":"0","@spacing-1":"2px","@spacing-2":"4px","@spacing-3":"6px","@spacing-4":"8px","@spacing-5":"10px","@spacing-6":"12px","@spacing-7":"16px","@spacing-8":"20px","@spacing-9":"24px","@spacing-10":"32px","@spacing-11":"36px","@spacing-12":"40px","@spacing-13":"48px","@spacing-14":"56px","@spacing-15":"60px","@spacing-16":"64px","@spacing-17":"72px","@spacing-18":"80px","@spacing-19":"84px","@spacing-20":"96px","@spacing-21":"100px","@spacing-22":"120px","@color-transparent":"transparent","@shadow-none":"none","@shadow-special":"0 0 1px rgba(0, 0, 0, 0.3)","@shadow1-center":"0 0 5px rgba(0, 0, 0, 0.1)","@shadow1-up":"0 -2px 5px rgba(0, 0, 0, 0.1)","@shadow1-down":"0 1px 7px 0 rgba(0,0,0,0.2)","@shadow1-left":"-2px 0 5px rgba(0, 0, 0, 0.1)","@shadow1-right":"2px 0 5px rgba(0, 0, 0, 0.1)","@shadow1-left-up":"-2px -2px 5px rgba(0, 0, 0, 0.1)","@shadow1-left-down":"-2px 2px 5px rgba(0, 0, 0, 0.1)","@shadow1-right-up":"2px -2px 5px rgba(0, 0, 0, 0.1)","@shadow1-right-down":"2px 2px 5px rgba(0, 0, 0, 0.1)","@shadow2-center":"0 0 10px rgba(0, 0, 0, 0.1)","@shadow2-up":"0 -4px 10px rgba(0, 0, 0, 0.1)","@shadow2-down":"0 4px 10px rgba(0, 0, 0, 0.1)","@shadow2-left":"-4px 0 10px rgba(0, 0, 0, 0.1)","@shadow2-right":"4px 0 10px rgba(0, 0, 0, 0.1)","@shadow2-left-up":"-4px -4px 10px rgba(0, 0, 0, 0.1)","@shadow2-left-down":"-4px 4px 10px rgba(0, 0, 0, 0.1)","@shadow2-right-up":"4px -4px 10px rgba(0, 0, 0, 0.1)","@shadow2-right-down":"4px 4px 10px rgba(0, 0, 0, 0.1)","@shadow3-center":"0 0 20px rgba(0, 0, 0, 0.1)","@shadow3-up":"0 -8px 20px rgba(0, 0, 0, 0.1)","@shadow3-down":"0 8px 20px rgba(0, 0, 0, 0.1)","@shadow3-left":"-8px 0 20px rgba(0, 0, 0, 0.1)","@shadow3-right":"8px 0 20px rgba(0, 0, 0, 0.1)","@shadow3-left-up":"-8px -8px 20px rgba(0, 0, 0, 0.1)","@shadow3-left-down":"-8px 8px 20px rgba(0, 0, 0, 0.1)","@shadow3-right-up":"8px -8px 20px rgba(0, 0, 0, 0.1)","@shadow3-right-down":"8px 8px 20px rgba(0, 0, 0, 0.1)","@opacity-none":"0","@opacity-1":"10%","@opacity-2":"20%","@opacity-3":"30%","@opacity-4":"40%","@opacity-5":"50%","@opacity-6":"60%","@opacity-7":"70%","@opacity-8":"80%","@opacity-9":"90%","@opacity-10":"100%","@font-size-display-3":"56px","@font-size-display-2":"48px","@font-size-display-1":"36px","@font-size-title-3":"24px","@font-size-title-2":"18px","@font-size-title-1":"16px","@font-size-body-3":"14px","@font-size-body-2":"13px","@font-size-body-1":"12px","@font-size-caption":"12px","@font-weight-100":"100","@font-weight-200":"200","@font-weight-300":"300","@font-weight-400":"400","@font-weight-500":"500","@font-weight-600":"600","@font-weight-700":"700","@font-weight-800":"800","@font-weight-900":"900","@color-primary-1":"rgb(var(--primary-1))","@color-primary-2":"rgb(var(--primary-2))","@color-primary-3":"rgb(var(--primary-3))","@color-primary-4":"rgb(var(--primary-4))","@color-primary-5":"rgb(var(--primary-5))","@color-primary-6":"rgb(var(--primary-6))","@color-primary-7":"rgb(var(--primary-7))","@color-primary-8":"rgb(var(--primary-8))","@color-primary-9":"rgb(var(--primary-9))","@color-primary-10":"rgb(var(--primary-10))","@color-success-1":"rgb(var(--success-1))","@color-success-2":"rgb(var(--success-2))","@color-success-3":"rgb(var(--success-3))","@color-success-4":"rgb(var(--success-4))","@color-success-5":"rgb(var(--success-5))","@color-success-6":"rgb(var(--success-6))","@color-success-7":"rgb(var(--success-7))","@color-success-8":"rgb(var(--success-8))","@color-success-9":"rgb(var(--success-9))","@color-success-10":"rgb(var(--success-10))","@color-warning-1":"rgb(var(--warning-1))","@color-warning-2":"rgb(var(--warning-2))","@color-warning-3":"rgb(var(--warning-3))","@color-warning-4":"rgb(var(--warning-4))","@color-warning-5":"rgb(var(--warning-5))","@color-warning-6":"rgb(var(--warning-6))","@color-warning-7":"rgb(var(--warning-7))","@color-warning-8":"rgb(var(--warning-8))","@color-warning-9":"rgb(var(--warning-9))","@color-warning-10":"rgb(var(--warning-10))","@color-danger-1":"rgb(var(--danger-1))","@color-danger-2":"rgb(var(--danger-2))","@color-danger-3":"rgb(var(--danger-3))","@color-danger-4":"rgb(var(--danger-4))","@color-danger-5":"rgb(var(--danger-5))","@color-danger-6":"rgb(var(--danger-6))","@color-danger-7":"rgb(var(--danger-7))","@color-danger-8":"rgb(var(--danger-8))","@color-danger-9":"rgb(var(--danger-9))","@color-danger-10":"rgb(var(--danger-10))","@color-link-1":"rgb(var(--link-1))","@color-link-2":"rgb(var(--link-2))","@color-link-3":"rgb(var(--link-3))","@color-link-4":"rgb(var(--link-4))","@color-link-5":"rgb(var(--link-5))","@color-link-6":"rgb(var(--link-6))","@color-link-7":"rgb(var(--link-7))","@color-link-8":"rgb(var(--link-8))","@color-link-9":"rgb(var(--link-9))","@color-link-10":"rgb(var(--link-10))","@radius-none":"var(--border-radius-none)","@radius-small":"var(--border-radius-small)","@radius-medium":"var(--border-radius-medium)","@radius-large":"var(--border-radius-large)","@radius-circle":"var(--border-radius-circle)","@color-white":"#ffffff","@dark-color-white":"rgba(255, 255, 255, 0.9)","@color-black":"#000000","@dark-color-black":"#000000","@mask-bg-opacity":"60%","@mask-color-bg":"rgba(29, 33, 41, 0.6)","@dark-mask-color-bg":"rgba(23, 23, 26, 0.6)","@color-menu-dark-bg":"#232324","@color-menu-light-bg":"#ffffff","@color-spin-layer-bg":"rgba(255, 255, 255, 0.6)","@color-menu-dark-hover":"rgba(255, 255, 255, 0.04)","@color-tooltip-bg":"rgb(var(--gray-10))","@dark-color-tooltip-bg":"#373739","@dark-color-spin-layer-bg":"rgba(51, 51, 51, 0.6)","@dark-color-menu-dark-hover":"var(--color-fill-2)","@color-border":"rgb(var(--gray-3))","@color-bg-popup":"var(--color-bg-5)","@color-bg-1":"#fff","@color-bg-2":"rgb(255, 255, 255)","@color-bg-3":"rgb(255, 255, 255)","@color-bg-4":"#fff","@color-bg-5":"#fff","@color-bg-white":"#fff","@color-text-1":"rgb(51, 53, 59)","@color-text-2":"rgb(96, 100, 111)","@color-text-3":"var(--color-neutral-6)","@color-text-4":"var(--color-neutral-4)","@color-fill-1":"var(--color-neutral-1)","@color-fill-2":"var(--color-neutral-2)","@color-fill-3":"var(--color-neutral-3)","@color-fill-4":"var(--color-neutral-4)","@color-border-1":"var(--color-neutral-2)","@color-border-2":"rgb(212, 215, 225)","@color-border-3":"var(--color-neutral-4)","@color-border-4":"var(--color-neutral-6)","@color-primary-light-1":"rgb(var(--primary-1))","@color-primary-light-2":"rgb(var(--primary-2))","@color-primary-light-3":"rgb(var(--primary-3))","@color-primary-light-4":"rgb(var(--primary-4))","@color-secondary":"var(--color-neutral-2)","@color-secondary-hover":"var(--color-neutral-3)","@color-secondary-active":"var(--color-neutral-4)","@color-secondary-disabled":"var(--color-neutral-1)","@color-danger-light-1":"rgb(var(--danger-1))","@color-danger-light-2":"rgb(var(--danger-2))","@color-danger-light-3":"rgb(var(--danger-3))","@color-danger-light-4":"rgb(var(--danger-4))","@color-success-light-1":"rgb(var(--success-1))","@color-success-light-2":"rgb(var(--success-2))","@color-success-light-3":"rgb(var(--success-3))","@color-success-light-4":"rgb(var(--success-4))","@color-warning-light-1":"rgb(var(--warning-1))","@color-warning-light-2":"rgb(var(--warning-2))","@color-warning-light-3":"rgb(var(--warning-3))","@color-warning-light-4":"rgb(var(--warning-4))","@dark-color-border":"#333335","@dark-color-bg-1":"#17171a","@dark-color-bg-2":"#232324","@dark-color-bg-3":"#2a2a2b","@dark-color-bg-4":"#313132","@dark-color-bg-5":"#373739","@dark-color-bg-white":"#f6f6f6","@dark-color-text-1":"rgba(255, 255, 255, 0.9)","@dark-color-text-2":"rgba(255, 255, 255, 0.7)","@dark-color-text-3":"rgba(255, 255, 255, 0.5)","@dark-color-text-4":"rgba(255, 255, 255, 0.3)","@dark-color-fill-1":"rgba(255, 255, 255, 0.04)","@dark-color-fill-2":"rgba(255, 255, 255, 0.08)","@dark-color-fill-3":"rgba(255, 255, 255, 0.12)","@dark-color-fill-4":"rgba(255, 255, 255, 0.16)","@dark-color-primary-light-1":"rgba(var(--primary-6), 0.2)","@dark-color-primary-light-2":"rgba(var(--primary-6), 0.35)","@dark-color-primary-light-3":"rgba(var(--primary-6), 0.5)","@dark-color-primary-light-4":"rgba(var(--primary-6), 0.65)","@dark-color-secondary":"rgba(var(--gray-9), 0.08)","@dark-color-secondary-hover":"rgba(var(--gray-8), 0.16)","@dark-color-secondary-active":"rgba(var(--gray-7), 0.24)","@dark-color-secondary-disabled":"rgba(var(--gray-9), 0.08)","@dark-color-danger-light-1":"rgba(var(--danger-6), 0.2)","@dark-color-danger-light-2":"rgba(var(--danger-6), 0.35)","@dark-color-danger-light-3":"rgba(var(--danger-6), 0.5)","@dark-color-danger-light-4":"rgba(var(--danger-6), 0.65)","@dark-color-success-light-1":"rgb(var(--success-6), 0.2)","@dark-color-success-light-2":"rgb(var(--success-6), 0.35)","@dark-color-success-light-3":"rgb(var(--success-6), 0.5)","@dark-color-success-light-4":"rgb(var(--success-6), 0.65)","@dark-color-warning-light-1":"rgb(var(--warning-6), 0.2)","@dark-color-warning-light-2":"rgb(var(--warning-6), 0.35)","@dark-color-warning-light-3":"rgb(var(--warning-6), 0.5)","@dark-color-warning-light-4":"rgb(var(--warning-6), 0.65)","@icon-hover-border-radius":"var(--border-radius-circle)","@icon-hover-color-bg":"var(--color-fill-2)","@icon-hover-size-default-height":"20px","@icon-hover-size-small-height":"20px","@icon-hover-size-mini-height":"20px","@icon-hover-size-large-height":"24px","@icon-hover-size-huge-height":"24px","@icon-hover-size-small-icon":"12px","@icon-hover-size-mini-icon":"12px","@icon-hover-size-default-icon":"12px","@icon-hover-size-large-icon":"12px","@icon-hover-size-huge-icon":"12px","@prefix":"arco","@arco-theme-tag":"body","@font-family":"PingFang SC,Microsoft YaHei,Hiragino Sans GB,noto sans,BlinkMacSystemFont,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif","@code-family":"Consolas, Menlo","@font-size-body":"14px","@transition-duration-1":"0.1s","@transition-duration-2":"0.2s","@transition-duration-3":"0.3s","@transition-duration-4":"0.4s","@transition-duration-5":"0.5s","@transition-duration-loading":"1s","@transition-timing-function-linear":"cubic-bezier(0, 0, 1, 1)","@transition-timing-function-standard":"cubic-bezier(0.34, 0.69, 0.1, 1)","@transition-timing-function-overshoot":"cubic-bezier(0.3, 1.3, 0.3, 1)","@transition-timing-function-decelerate":"cubic-bezier(0.4, 0.8, 0.74, 1)","@transition-timing-function-accelerate":"cubic-bezier(0.26, 0, 0.6, 0.2)","@z-index-popup-base":"1000","@z-index-affix":"999","@z-index-popup":"1000","@z-index-drawer":"1001","@z-index-modal":"1001","@z-index-message":"1003","@z-index-notification":"1003","@z-index-image-preview":"1001","@line-height-base":"1.5715","@popup-box-shadow-base":"0 2px 5px rgba(0, 0, 0, 0.1)","@input-color-bg":"@color-bg-2","@input-color-border":"@color-fill-3","@input-color-bg_hover":"@color-bg-2","@input-color-border_hover":"@color-border-2","@input-color-bg_error":"@color-bg-2","@input-color-border_error":"@color-danger-5","@input-color-border_error_hover":"@color-danger-5","@input-color-bg_error_hover":"@color-bg-2","@btn-size-default-height":"@size-default","@btn-size-default-padding-horizontal":"@spacing-7","@btn-outline-color-border":"@color-primary-6","@card-border-radius-no-border":"@border-radius-none","@card-size-default-font-size-title":"@font-size-title-2","@table-color-text-header-cell":"@color-text-1","@table-font-weight-header-text":"@font-weight-700","@table-color-bg-header-cell":"@color-bg-th","@modal-box-shadow":"@shadow1-down","@modal-default-size-width":"520px","@pagination-color-text-total":"@color-text-1","@pagination-color-jumper-goto":"@color-text-1","@patination-jumper-input-width":"@size-default","@pagination-border-width":"@border-1","@pagination-color-item-border":"@color-border-2","@pagination-color-item-text":"@color-text-1","@pagination-item-spacing":"@spacing-3","@pagination-margin-option-left":"@spacing-6","@pagination-size-icon-arrow_default":"@size-6","@pagination-size-default":"@size-default","@pagination-color-icon-arrow":"@color-text-3","@pagination-color-icon-arrow-bg_disabled":"@color-fill-1","@table-border-width":"@border-1","@pagination-simple-input-width":"@size-default","@pagination-item-border-radius":"@border-radius-medium","@pagination-size-icon-arrow_small":"@size-6","@pagination-size-icon-arrow_large":"@size-18","@pagination-size-icon-arrow_mini":"@size-6","@card-border-width":"@border-1","@select-popup-option-height":"@size-18","@modal-default-size-header-height":"@size-24","@btn-border-radius":"@border-radius-medium","@input-border-radius":"@border-radius-medium","@card-size-small-padding-vertical-body":"@spacing-7","@modal-default-align-header":"left","@dropdown-border-radius":"@border-radius-medium","@dropdown-max-height":"200px","@card-size-default-padding-horizontal-body":"18px","@card-size-default-padding-vertical-body":"18px","@card-size-default-padding-horizontal-title":"18px","@input-tag-tag-margin-vertical":"@spacing-1","@input-tag-size-default-tag-height":"@size-12","@popconfirm-margin-button-left":"@spacing-6","@popconfirm-margin-title-bottom":"@spacing-6","@modal-default-padding-content-vertical":"@spacing-7","@modal-default-padding-footer-vertical":"@spacing-6","@modal-color-header-text":"@color-text-1","@color-bg-th":"#eff1f7","@dark-color-bg-th":"#eff1f7","@table-border-radius":"@border-radius-medium","@btn-size-small-font-size":"@font-size-body-1","@table-color-text-body-cell":"@color-text-1","@steps-size-default-font-size-icon":"@size-8","@steps-size-default":"@size-14","@steps-size-small":"@size-mini","@steps-size-small-font-size-icon":"@size-5","@drawer-position-close-icon-right":"@spacing-7","@drawer-font-size-close-icon":"@size-6","@drawer-size-header-height":"@size-24","@timeline-item-min-height":"@size-39","@steps-size-default-arrow":"@size-36","@input-tag-size-mini-tag-height":"@size-10","@input-tag-size-small-tag-height":"@size-10","@input-tag-size-large-tag-height":"@size-14","@dropdown-option-height":"@size-18","@result-size-icon":"@size-10","@breadcrumb-size-text-height":"@size-12","@drawer-padding-content-vertical":"@spacing-7","@switch-size-default":"@size-12","@switch-circle-default-width":"@size-20","@switch-size-dot-default":"@size-9","@switch-line-size-dot-default":"@size-10","@switch-round-default-width":"@size-20","@switch-size-small":"@size-8","@switch-circle-small-width":"@size-14","@switch-round-small-width":"@size-14","@switch-line-small-width":"@size-14","@switch-line-size-dot-small":"@size-8","@slider-size-button-width":"@size-6","@slider-size-input-width":"@size-30","@slider-size-input-height":"@size-16","@slider-size-input_range-width":"@size-10","@checkbox-mask-bg-height":"@size-12","@checkbox-size-check-icon":"@size-6","@checkbox-group-size-line-height_vertical":"@size-16","@tree-size-expand-icon-bg_hover":"@size-8","@empty-font-size-image":"@size-24","@empty-size-img-height":"@size-40","@comment-size-avatar-width":"@size-16","@collapse-expand-icon-size-bg":"@size-8","@avatar-size-default":"@size-20","@avatar-size-trigger-button":"@size-10","@avatar-size-trigger-icon":"@size-6","@link-size-icon":"@size-6","@color-border-table":"#e8ebf2","@dark-color-border-table":"#ffffff","@table-color-border":"@color-border-table","@btn-dashed-border-style":"@border-dashed","@btn-dashed-color-text":"@color-text-1","@btn-dashed-color-bg":"@color-bg-white","@btn-dashed-color-border":"@color-border-2","@btn-text-color-text":"@color-link-6","@dark-color-text-btn":"#396efe","@color-text-btn":"#396efe","@select-size-icon":"@size-6","@upload-text-item-size-file-icon":"@size-8","@upload-text-item-size-operation-icon":"@size-6","@select-popup-group-title-height":"@size-18","@page-header-color-header-border":"@color-transparent","@table-color-bg-body-row_active":"@color-transparent","@steps-circle-color-item-bg_wait":"@color-transparent","@steps-circle-color-item-border_wait":"@color-border-3","@steps-circle-color-item-bg_finish":"@color-transparent","@steps-circle-color-item-border_finish":"@color-primary-7","@steps-circle-color-item-title_finish":"@color-text-2","@modal-simple-align-header":"left","@modal-simple-align-footer":"right","@btn-text-color-bg_hover":"@color-transparent","@btn-text-color-text_hover":"@color-link-5","@btn-text-color-text_active":"@color-primary-7","@btn-text-color-text_warning_hover":"@color-warning-5","@btn-text-color-bg_active":"@color-transparent","@btn-text-color-bg_warning_hover":"@color-transparent","@btn-text-color-text_warning_active":"@color-warning-7","@btn-text-color-text_danger_hover":"@color-danger-5","@btn-text-color-text_danger_active":"@color-danger-7","@btn-text-color-bg_danger_active":"@color-transparent","@btn-text-color-text_success":"@color-success-6","@btn-text-color-text_success_hover":"@color-success-5","@btn-text-color-text_success_active":"@color-success-7","@btn-text-color-bg_success_active":"@color-transparent","@btn-secondary-color-border":"@color-border-3","@btn-secondary-color-border_disabled":"@color-border-2","@btn-secondary-color-bg":"@color-transparent","@btn-secondary-color-border_hover":"@color-border-3","@btn-secondary-color-border_active":"@color-border-3","@btn-secondary-color-bg_hover":"@color-fill-2","@btn-secondary-color-bg_active":"@color-fill-3","@tree-size-mini-icon-size":"@size-6","@tree-size-small-icon-size":"@size-6","@tree-size-default-icon-size":"@size-6","@tree-size-large-icon-size":"@size-6","@select-popup-max-height":"200px","@radio-layout-height":"@size-9","@radio-button-spacing":"3px","@checkbox-mask-height":"@size-9","@checkbox-color-indeterminate-icon-width":"@size-4","@checkbox-color-indeterminate-icon-height":"@size-1","@switch-color-bg_on_loading":"@color-text-btn","@switch-color-bg_off_loading":"@color-fill-4","@input-size-icon-clear":"@size-6","@password-size-eye-icon":"@size-6","@input-color-addon-border_default":"@color-fill-3","@input-color-addon-border":"@color-transparent","@input-color-addon-bg":"@color-fill-1","@steps-circle-size-item-tail":"@border-1","@steps-dot-size-item-icon":"@size-2","@message-info-color-bg":"@color-link-1","@message-success-color-bg":"@color-success-1","@message-warning-color-bg":"@color-warning-1","@message-error-color-bg":"@color-danger-1","@message-loading-color-bg":"@color-link-1","@message-border-width":"@border-none","@modal-simple-size-width":"320px","@modal-simple-padding-horizontal":"@spacing-8","@modal-simple-padding-top":"@spacing-9","@modal-simple-padding-bottom":"@spacing-8","@modal-simple-margin-footer-top":"@spacing-8","@modal-simple-margin-content-top":"@spacing-3","@btn-text-color-bg_success_hover":"@color-transparent","@btn-text-color-bg_warning_active":"@color-transparent","@btn-text-color-bg_danger_hover":"@color-transparent"},"modifyVars":{"@input-color-bg":"@color-bg-2","@input-color-border":"@color-fill-3","@input-color-bg_hover":"@color-bg-2","@input-color-border_hover":"@color-border-2","@input-color-bg_error":"@color-bg-2","@input-color-border_error":"@color-danger-5","@input-color-border_error_hover":"@color-danger-5","@input-color-bg_error_hover":"@color-bg-2","@primary-6":"rgb(60, 110, 255)","@size-1":"2px","@size-4":"8px","@size-20":"40px","@size-38":"76px","@size-3":"6px","@size-15":"30px","@size-12":"24px","@size-7":"14px","@size-33":"66px","@size-5":"10px","@size-10":"20px","@size-11":"22px","@size-9":"18px","@size-23":"46px","@size-27":"54px","@size-14":"28px","@size-8":"16px","@size-21":"42px","@size-24":"48px","@size-2":"4px","@size-46":"92px","@size-19":"38px","@size-6":"12px","@size-39":"78px","@size-13":"26px","@size-35":"70px","@size-16":"32px","@size-40":"80px","@size-25":"50px","@size-29":"58px","@size-22":"44px","@size-18":"36px","@size-17":"34px","@size-30":"60px","@size-28":"56px","@size-26":"52px","@size-34":"68px","@size-47":"94px","@size-43":"86px","@size-48":"96px","@size-31":"62px","@size-32":"64px","@size-36":"72px","@size-50":"100px","@size-41":"82px","@size-42":"84px","@size-44":"88px","@size-37":"74px","@size-45":"90px","@size-49":"98px","@size-mini":"@size-12","@size-small":"@size-15","@success-6":"rgb(36, 209, 126)","@danger-6":"rgb(255, 26, 59)","@font-family":"PingFang SC,Microsoft YaHei,Hiragino Sans GB,noto sans,BlinkMacSystemFont,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif","@font-size-title-2":"18px","@color-text-1":"rgb(51, 53, 59)","@btn-size-default-height":"@size-default","@size-default":"@size-18","@btn-size-default-padding-horizontal":"@spacing-7","@btn-outline-color-border":"@color-primary-6","@color-border-2":"rgb(212, 215, 225)","@card-border-radius-no-border":"@border-radius-none","@card-size-default-font-size-title":"@font-size-title-2","@color-bg-2":"rgb(255, 255, 255)","@color-bg-3":"rgb(255, 255, 255)","@table-color-text-header-cell":"@color-text-1","@table-font-weight-header-text":"@font-weight-700","@table-color-bg-header-cell":"@color-bg-th","@modal-box-shadow":"@shadow1-down","@modal-default-size-width":"520px","@shadow1-right-down":"2px 2px 5px rgba(0, 0, 0, 0.1)","@shadow1-down":"0 1px 7px 0 rgba(0,0,0,0.2)","@pagination-color-text-total":"@color-text-1","@pagination-color-jumper-goto":"@color-text-1","@patination-jumper-input-width":"@size-default","@pagination-border-width":"@border-1","@pagination-color-item-border":"@color-border-2","@pagination-color-item-text":"@color-text-1","@pagination-item-spacing":"@spacing-3","@pagination-margin-option-left":"@spacing-6","@pagination-size-icon-arrow_default":"@size-6","@pagination-size-default":"@size-default","@pagination-color-icon-arrow":"@color-text-3","@pagination-color-icon-arrow-bg_disabled":"@color-fill-1","@border-radius-medium":"3px","@table-border-width":"@border-1","@pagination-simple-input-width":"@size-default","@size-large":"@size-20","@pagination-item-border-radius":"@border-radius-medium","@pagination-size-icon-arrow_small":"@size-6","@pagination-size-icon-arrow_large":"@size-18","@pagination-size-icon-arrow_mini":"@size-6","@color-text-2":"rgb(96, 100, 111)","@card-border-width":"@border-1","@select-popup-option-height":"@size-18","@modal-default-size-header-height":"@size-24","@btn-border-radius":"@border-radius-medium","@input-border-radius":"@border-radius-medium","@card-size-small-padding-vertical-body":"@spacing-7","@modal-default-align-header":"left","@dropdown-border-radius":"@border-radius-medium","@dropdown-max-height":"200px","@card-size-default-padding-horizontal-body":"18px","@card-size-default-padding-vertical-body":"18px","@card-size-default-padding-horizontal-title":"18px","@input-tag-tag-margin-vertical":"@spacing-1","@input-tag-size-default-tag-height":"@size-12","@popconfirm-margin-button-left":"@spacing-6","@popconfirm-margin-title-bottom":"@spacing-6","@modal-default-padding-content-vertical":"@spacing-7","@modal-default-padding-footer-vertical":"@spacing-6","@modal-color-header-text":"@color-text-1","@color-bg-th":"#eff1f7","@dark-color-bg-th":"#eff1f7","@table-border-radius":"@border-radius-medium","@btn-size-small-font-size":"@font-size-body-1","@table-color-text-body-cell":"@color-text-1","@steps-size-default-font-size-icon":"@size-8","@steps-size-default":"@size-14","@steps-size-small":"@size-mini","@steps-size-small-font-size-icon":"@size-5","@drawer-position-close-icon-right":"@spacing-7","@drawer-font-size-close-icon":"@size-6","@drawer-size-header-height":"@size-24","@timeline-item-min-height":"@size-39","@steps-size-default-arrow":"@size-36","@input-tag-size-mini-tag-height":"@size-10","@input-tag-size-small-tag-height":"@size-10","@input-tag-size-large-tag-height":"@size-14","@dropdown-option-height":"@size-18","@result-size-icon":"@size-10","@breadcrumb-size-text-height":"@size-12","@drawer-padding-content-vertical":"@spacing-7","@switch-size-default":"@size-12","@switch-circle-default-width":"@size-20","@switch-size-dot-default":"@size-9","@switch-line-size-dot-default":"@size-10","@switch-round-default-width":"@size-20","@switch-size-small":"@size-8","@switch-circle-small-width":"@size-14","@switch-round-small-width":"@size-14","@switch-line-small-width":"@size-14","@switch-line-size-dot-small":"@size-8","@slider-size-button-width":"@size-6","@slider-size-input-width":"@size-30","@slider-size-input-height":"@size-16","@slider-size-input_range-width":"@size-10","@checkbox-mask-bg-height":"@size-12","@checkbox-size-check-icon":"@size-6","@checkbox-group-size-line-height_vertical":"@size-16","@tree-size-expand-icon-bg_hover":"@size-8","@empty-font-size-image":"@size-24","@empty-size-img-height":"@size-40","@comment-size-avatar-width":"@size-16","@collapse-expand-icon-size-bg":"@size-8","@avatar-size-default":"@size-20","@avatar-size-trigger-button":"@size-10","@avatar-size-trigger-icon":"@size-6","@link-size-icon":"@size-6","@color-border-table":"#e8ebf2","@dark-color-border-table":"#ffffff","@table-color-border":"@color-border-table","@btn-dashed-border-style":"@border-dashed","@btn-dashed-color-text":"@color-text-1","@btn-dashed-color-bg":"@color-bg-white","@btn-dashed-color-border":"@color-border-2","@primary-7":"rgb(16, 99, 255)","@btn-text-color-text":"@color-link-6","@primary-5":"rgb(57, 110, 254)","@dark-color-text-btn":"#396efe","@color-text-btn":"#396efe","@select-size-icon":"@size-6","@upload-text-item-size-file-icon":"@size-8","@upload-text-item-size-operation-icon":"@size-6","@select-popup-group-title-height":"@size-18","@page-header-color-header-border":"@color-transparent","@table-color-bg-body-row_active":"@color-transparent","@steps-circle-color-item-bg_wait":"@color-transparent","@steps-circle-color-item-border_wait":"@color-border-3","@steps-circle-color-item-bg_finish":"@color-transparent","@steps-circle-color-item-border_finish":"@color-primary-7","@steps-circle-color-item-title_finish":"@color-text-2","@modal-simple-align-header":"left","@modal-simple-align-footer":"right","@btn-text-color-bg_hover":"@color-transparent","@btn-text-color-text_hover":"@color-link-5","@btn-text-color-text_active":"@color-primary-7","@btn-text-color-text_warning_hover":"@color-warning-5","@btn-text-color-bg_active":"@color-transparent","@btn-text-color-bg_warning_hover":"@color-transparent","@btn-text-color-text_warning_active":"@color-warning-7","@btn-text-color-text_danger_hover":"@color-danger-5","@btn-text-color-text_danger_active":"@color-danger-7","@btn-text-color-bg_danger_active":"@color-transparent","@btn-text-color-text_success":"@color-success-6","@btn-text-color-text_success_hover":"@color-success-5","@btn-text-color-text_success_active":"@color-success-7","@btn-text-color-bg_success_active":"@color-transparent","@btn-secondary-color-border":"@color-border-3","@btn-secondary-color-border_disabled":"@color-border-2","@btn-secondary-color-bg":"@color-transparent","@btn-secondary-color-border_hover":"@color-border-3","@btn-secondary-color-border_active":"@color-border-3","@btn-secondary-color-bg_hover":"@color-fill-2","@btn-secondary-color-bg_active":"@color-fill-3","@tree-size-mini-icon-size":"@size-6","@tree-size-small-icon-size":"@size-6","@tree-size-default-icon-size":"@size-6","@tree-size-large-icon-size":"@size-6","@select-popup-max-height":"200px","@radio-layout-height":"@size-9","@radio-button-spacing":"3px","@checkbox-mask-height":"@size-9","@checkbox-color-indeterminate-icon-width":"@size-4","@checkbox-color-indeterminate-icon-height":"@size-1","@switch-color-bg_on_loading":"@color-text-btn","@switch-color-bg_off_loading":"@color-fill-4","@input-size-icon-clear":"@size-6","@password-size-eye-icon":"@size-6","@input-color-addon-border_default":"@color-fill-3","@input-color-addon-border":"@color-transparent","@input-color-addon-bg":"@color-fill-1","@steps-circle-size-item-tail":"@border-1","@steps-dot-size-item-icon":"@size-2","@message-info-color-bg":"@color-link-1","@message-success-color-bg":"@color-success-1","@message-warning-color-bg":"@color-warning-1","@message-error-color-bg":"@color-danger-1","@message-loading-color-bg":"@color-link-1","@message-border-width":"@border-none","@modal-simple-size-width":"320px","@modal-simple-padding-horizontal":"@spacing-8","@modal-simple-padding-top":"@spacing-9","@modal-simple-padding-bottom":"@spacing-8","@modal-simple-margin-footer-top":"@spacing-8","@modal-simple-margin-content-top":"@spacing-3","@btn-text-color-bg_success_hover":"@color-transparent","@btn-text-color-bg_warning_active":"@color-transparent","@btn-text-color-bg_danger_hover":"@color-transparent"}};</script><script type="text/javascript" src="//unpkg.com/less@3.13.1/dist/less.js"></script><script>window.ArcoPath = "https://unpkg.com/@arco-design/arco-vue-ui-dist@latest/dist/arco.min.js";
+window.ArcoIconPath = "https://unpkg.com/@arco-design/arco-vue-ui-dist@latest/dist/arcoicon.min.js";
+window.CustomIconPath = "";</script></head>
+<body>
+<div id='root'></div>
+<script type="text/javascript" defer src="//unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@arco-design/arco-vue-ui-dist@latest/dist/arcoicon.min.js" defer="defer"></script>
+<script type="text/javascript" src="https://unpkg.com/@arco-design/arco-vue-ui-dist@latest/dist/arco.min.js" defer="defer"></script>
+<script type="text/javascript" src="//lf-cdn-tos.bytescm.com/obj/static/arco-themes-vue/arco-vue-pro.1648452255899.js" defer="defer"></script>
+<script>(function () {
+  let styleNode;
+  let timerRef;
+  let prevType;
+
+  const toggleLoading = function (show)  {
+    const node = document.querySelector('#loadingNode');
+    if (node) {
+      node.style.display = show ? '' : 'none';
+    } else {
+      console.error('loading node is null ');
+    }
+  };
+
+  const lessModifyVars = async function (vars) {
+    if (typeof window.less.modifyVars === 'function') {
+      return await window.less.modifyVars(vars);
+    } else if (window.less) {
+      console.error('less.modifyVars is not a function ');
+    }
+  };
+
+  const handler = async (e) => {
+    const domains = ['//localhost', '//arco.bytedance.net', '//arco.design', '//arco.boe.bytedance.net'];
+    const { data, origin } = e;
+    if (domains.every((key) => origin.indexOf(key) === -1)) {
+      console.error('origin is valid');
+      return;
+    }
+    if (data) {
+      if (timerRef && prevType === data.type) {
+        clearTimeout(timerRef);
+      }
+      prevType = data.type;
+      // 这里使用settimeout是为了避免iframe内部js的执行阻塞父页面的渲染
+      timerRef = setTimeout(async () => {
+        const { type, info } = data;
+
+        if (type === 'compileLess') {
+          toggleLoading(true);
+          setTimeout(async () => {
+            await lessModifyVars(info);
+            toggleLoading(false);
+          }, 0);
+        } else if (type === 'compiling') {
+          toggleLoading(info);
+        } else if (type === 'compilePreview') {
+          lessModifyVars(info.tokens);
+
+          if (styleNode) {
+            document.head.removeChild(styleNode);
+          } // stylenode 中包含自定义css的编译，所以移除掉
+          const defaultId = info.themeId + '_customize_style_first_render';
+          const defaultNode = document.getElementById(defaultId);
+
+          if (defaultNode) {
+            document.head.removeChild(defaultNode);
+          }
+          styleNode = document.createElement('style');
+
+          styleNode.innerHTML = info.styleContent;
+
+          document.head.appendChild(styleNode);
+        } else if (type === 'customerLess') {
+          toggleLoading(true);
+          const { code, componentName, themeId } = info;
+          const customerId = componentName + '_customize_style';
+          const defaultId = themeId + '_customize_style_first_render';
+          if (typeof window.less.render === 'function') {
+            window.less.render(code, (err, output) => {
+              toggleLoading(false);
+              if (err) {
+                console.error('render customerLess failed', err);
+                // Message.error('编译失败！');
+              } else {
+                const originNode = document.getElementById(customerId);
+                const defaultNode = document.getElementById(defaultId);
+
+                if (defaultNode) {
+                  document.head.removeChild(defaultNode);
+                }
+                if (originNode) {
+                  document.head.removeChild(originNode);
+                }
+
+                if (output) {
+                  const styleNode = document.createElement('style');
+                  styleNode.id = customerId;
+                  styleNode.innerHTML = output.css;
+                  document.head.appendChild(styleNode);
+                }
+              }
+            });
+          }
+        } else if (type === 'setDarkTheme') {
+          document.body.setAttribute('arco-theme', info ? 'dark' : 'light');
+        }
+
+        timerRef = undefined;
+      }, 0);
+    }
+  };
+  window.addEventListener('message', handler, false);
+})()
+
+</script></body>
+</html>
