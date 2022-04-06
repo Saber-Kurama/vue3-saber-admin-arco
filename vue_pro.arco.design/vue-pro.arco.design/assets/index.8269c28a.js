@@ -19669,159 +19669,175 @@ function _sfc_render$1(e, t, n, o, r, s) {
         S = resolveComponent("a-typography-text"),
         C = resolveComponent("IconClose"),
         x = resolveComponent("a-modal");
-    return openBlock(), createElementBlock("li", null, [createVNode(f, {
-        content: e.$t("settings.navbar.skin")
-    }, {
-        default: withCtx(() => [createVNode(m, {
-            count: e.hasCustomTheme ? 1 : 0,
-            dot: ""
-        }, {
-            default: withCtx(() => [createVNode(u, {
-                class: "nav-btn",
-                type: "outline",
-                shape: "circle",
-                onClick: e.openDialog
-            }, {
-                icon: withCtx(() => [createVNode(l)]),
-                _: 1
-            }, 8, ["onClick"])]),
-            _: 1
-        }, 8, ["count"])]),
+    return openBlock(), 
+	createElementBlock("li", null, [
+		createVNode(f, {
+			content: e.$t("settings.navbar.skin")
+			}, 
+			{
+				default: withCtx(() => [createVNode(m, {
+				count: e.hasCustomTheme ? 1 : 0,
+				dot: ""
+			}, 
+			{
+				default: withCtx(() => [createVNode(u, {
+					class: "nav-btn",
+					type: "outline",
+					shape: "circle",
+					onClick: e.openDialog
+				}, {
+					icon: withCtx(() => [createVNode(l)]),
+					_: 1
+				}, 8, ["onClick"])]),
+				_: 1
+			}, 
+			8, ["count"])]),
         _: 1
-    }, 8, ["content"]), createVNode(x, {
-        visible: e.visible,
-        width: "900px",
-        "unmount-on-close": "",
-        onCancel: e.closeDialog
-    }, createSlots({
-        title: withCtx(() => [createTextVNode(toDisplayString(e.$t("settings.navbar.skin")), 1)]),
-        default: withCtx(() => [e.loading ? (openBlock(), createElementBlock("div", _hoisted_1$5, [createVNode(v, {
-            gutter: [20, 20]
-        }, {
-            default: withCtx(() => [(openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5, 6], (B, L) => createVNode(d, {
-                key: L,
-                span: 8
-            }, {
-                default: withCtx(() => [createVNode(w, {
-                    style: {
-                        height: "261px"
-                    }
-                }, {
-                    cover: withCtx(() => [createVNode(b, {
-                        animation: ""
-                    }, {
-                        default: withCtx(() => [createVNode(g, {
-                            direction: "vertical",
-                            fill: "",
-                            size: "large"
-                        }, {
-                            default: withCtx(() => [createVNode(_, {
-                                "line-height": 160,
-                                rows: 1
-                            })]),
-                            _: 1
-                        })]),
-                        _: 1
-                    })]),
-                    default: withCtx(() => [createVNode(b, {
-                        animation: ""
-                    }, {
-                        default: withCtx(() => [createVNode(g, {
-                            direction: "vertical",
-                            style: {
-                                width: "100%"
-                            },
-                            size: "large"
-                        }, {
-                            default: withCtx(() => [createVNode(_, {
-                                widths: ["100%", 130],
-                                rows: 2
-                            })]),
-                            _: 1
-                        })]),
-                        _: 1
-                    })]),
-                    _: 1
-                })]),
-                _: 2
-            }, 1024)), 64))]),
-            _: 1
-        })])) : (openBlock(), createElementBlock("div", _hoisted_2$4, [createVNode(v, {
-            gutter: [20, 20]
-        }, {
-            default: withCtx(() => [(openBlock(!0), createElementBlock(Fragment, null, renderList(e.renderData, B => (openBlock(), createBlock(d, {
-                key: B._id,
-                span: 8
-            }, {
-                default: withCtx(() => [createVNode(w, {
-                    class: "tb-card"
-                }, {
-                    cover: withCtx(() => [createBaseVNode("img", {
-                        src: B.cover,
-                        style: {
-                            height: "160px"
-                        }
-                    }, null, 8, _hoisted_3$2)]),
-                    actions: withCtx(() => [createVNode(u, {
-                        class: "tb-link",
-                        type: "text",
-                        size: "mini",
-                        href: `${e.apiBasename}/themes/design/${B.themeId}`,
-                        target: "_blank"
-                    }, {
-                        icon: withCtx(() => [createVNode(I)]),
-                        default: withCtx(() => [createTextVNode(" " + toDisplayString(e.$t("openInDesignLab")), 1)]),
-                        _: 2
-                    }, 1032, ["href"]), e.themeObj && e.themeObj.packageName === B.packageName ? (openBlock(), createBlock(k, {
-                        key: 0,
-                        color: "arcoblue"
-                    }, {
-                        default: withCtx(() => [_hoisted_4$2]),
-                        _: 1
-                    })) : (openBlock(), createBlock(u, {
-                        key: 1,
-                        type: "primary",
-                        size: "mini",
-                        loading: e.installing,
-                        onClick: L => e.useTheme(B)
-                    }, {
-                        default: withCtx(() => [createTextVNode(toDisplayString(e.$t("install")), 1)]),
-                        _: 2
-                    }, 1032, ["loading", "onClick"]))]),
-                    default: withCtx(() => [createVNode(y, null, {
-                        title: withCtx(() => [createTextVNode(toDisplayString(B.themeName), 1)]),
-                        _: 2
-                    }, 1024)]),
-                    _: 2
-                }, 1024)]),
-                _: 2
-            }, 1024))), 128))]),
-            _: 1
-        })])), createBaseVNode("div", _hoisted_5$2, [createVNode(z, {
-            total: e.total,
-            "page-size": 6,
-            current: e.currentPage,
-            onChange: e.onChangePagination
-        }, null, 8, ["total", "current", "onChange"])])]),
-        _: 2
-    }, [e.hasCustomTheme ? {
-        name: "footer",
-        fn: withCtx(() => [createBaseVNode("div", _hoisted_6$2, [createVNode(S, {
-            bold: ""
-        }, {
-            default: withCtx(() => [createTextVNode(toDisplayString(e.$t("currentTheme")) + "\uFF1A" + toDisplayString(e.themeObj.themeName), 1)]),
-            _: 1
-        }), createVNode(u, {
-            type: "primary",
-            status: "danger",
-            size: "small",
-            onClick: e.resetTheme
-        }, {
-            icon: withCtx(() => [createVNode(C)]),
-            default: withCtx(() => [createTextVNode(" " + toDisplayString(e.$t("resetTheme")), 1)]),
-            _: 1
-        }, 8, ["onClick"])])])
-    } : void 0]), 1032, ["visible", "onCancel"])])
+		}, 8, ["content"]), 
+		createVNode(x, {
+				visible: e.visible,
+				width: "900px",
+				"unmount-on-close": "",
+				onCancel: e.closeDialog
+			}, 
+			createSlots({
+				title: withCtx(() => [createTextVNode(toDisplayString(e.$t("settings.navbar.skin")), 1)]),
+				default: withCtx(() => [e.loading ? (openBlock(), createElementBlock("div", _hoisted_1$5, [createVNode(v, {
+					gutter: [20, 20]
+				}, {
+					default: withCtx(() => [(openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5, 6], (B, L) => createVNode(d, {
+						key: L,
+						span: 8
+					}, {
+						default: withCtx(() => [createVNode(w, {
+													style: {
+														height: "261px"
+													}
+												},
+												{
+													cover: withCtx(() => [createVNode(b, {
+																				animation: ""
+																			}, 
+																			{
+																				default: withCtx(() => [createVNode(g, {
+																					direction: "vertical",
+																					fill: "",
+																					size: "large"
+																				}, {
+																					default: withCtx(() => [createVNode(_, {
+																						"line-height": 160,
+																						rows: 1
+																					})]),
+																					_: 1
+																				})]),
+																				_: 1
+																			},
+												    )]),
+													default: withCtx(() => [createVNode(b, {
+														animation: ""
+													}, {
+														default: withCtx(() => [createVNode(g, {
+															direction: "vertical",
+															style: {
+																width: "100%"
+															},
+															size: "large"
+														}, {
+															default: withCtx(() => [createVNode(_, {
+																widths: ["100%", 130],
+																rows: 2
+															})]),
+															_: 1
+														})]),
+														_: 1
+													})]),
+													_: 1
+												},
+							)]),
+							_: 2
+						}, 1024)), 64))]),
+					_: 1
+				})])) : (openBlock(), createElementBlock("div", _hoisted_2$4, [createVNode(v, {
+					gutter: [20, 20]
+				}, {
+					default: withCtx(() => [(openBlock(!0), createElementBlock(Fragment, null, renderList(e.renderData, B => (openBlock(), createBlock(d, {
+						key: B._id,
+						span: 8
+					}, {
+						default: withCtx(() => [createVNode(w, {
+							class: "tb-card"
+						}, {
+							cover: withCtx(() => [createBaseVNode("img", {
+								src: B.cover,
+								style: {
+									height: "160px"
+								}
+							}, null, 8, _hoisted_3$2)]),
+							actions: withCtx(() => [createVNode(u, {
+								class: "tb-link",
+								type: "text",
+								size: "mini",
+								href: `${e.apiBasename}/themes/design/${B.themeId}`,
+								target: "_blank"
+							}, {
+								icon: withCtx(() => [createVNode(I)]),
+								default: withCtx(() => [createTextVNode(" " + toDisplayString(e.$t("openInDesignLab")), 1)]),
+								_: 2
+							}, 1032, ["href"]), e.themeObj && e.themeObj.packageName === B.packageName ? (openBlock(), createBlock(k, {
+								key: 0,
+								color: "arcoblue"
+							}, {
+								default: withCtx(() => [_hoisted_4$2]),
+								_: 1
+							})) : (openBlock(), createBlock(u, {
+								key: 1,
+								type: "primary",
+								size: "mini",
+								loading: e.installing,
+								onClick: L => e.useTheme(B)
+							}, {
+								default: withCtx(() => [createTextVNode(toDisplayString(e.$t("install")), 1)]),
+								_: 2
+							}, 1032, ["loading", "onClick"]))]),
+							default: withCtx(() => [createVNode(y, null, {
+								title: withCtx(() => [createTextVNode(toDisplayString(B.themeName), 1)]),
+								_: 2
+							}, 1024)]),
+							_: 2
+						}, 1024)]),
+						_: 2
+					}, 1024))), 128))]),
+					_: 1
+				})])), createBaseVNode("div", _hoisted_5$2, [createVNode(z, {
+					total: e.total,
+					"page-size": 6,
+					current: e.currentPage,
+					onChange: e.onChangePagination
+				}, null, 8, ["total", "current", "onChange"])])],
+				),
+				_: 2
+			}, 
+			[e.hasCustomTheme ? {
+				name: "footer",
+				fn: withCtx(() => [createBaseVNode("div", _hoisted_6$2, [createVNode(S, {
+					bold: ""
+				}, {
+					default: withCtx(() => [createTextVNode(toDisplayString(e.$t("currentTheme")) + "\uFF1A" + toDisplayString(e.themeObj.themeName), 1)]),
+					_: 1
+				}), createVNode(u, {
+					type: "primary",
+					status: "danger",
+					size: "small",
+					onClick: e.resetTheme
+				}, {
+					icon: withCtx(() => [createVNode(C)]),
+					default: withCtx(() => [createTextVNode(" " + toDisplayString(e.$t("resetTheme")), 1)]),
+					_: 1
+				}, 8, ["onClick"])])])
+			} : void 0]), 
+			1032, ["visible", "onCancel"])
+		],
+	)
 }
 var ThemesDialog = _export_sfc(_sfc_main$a, [
     ["render", _sfc_render$1],
